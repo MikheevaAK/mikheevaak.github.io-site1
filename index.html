@@ -19,7 +19,8 @@
   <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script defer src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script defer src="lazyload.min.js"></script>
+  <!-- <script defer src="lazyload.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
   <script defer src="script.min.js"></script>
 </head>
 
@@ -238,7 +239,7 @@
                   <source media="(max-width: 640px)" srcset="img/stages-img-1-320px.webp, img/stages-img-1-320px.png">
                   <source media="(max-width: 917px)" srcset="img/stages-img1-768px.webp, img/stages-img1-768px.jpg">
                   <source media="(max-width: 1024px)" srcset="img/stages-img1-1024px.webp, img/stages-img1-1024px.jpg">
-                  <img srcset="img/stages-1-1920px.webp" src="img/stages-1-1920px.jpg" alt="">
+                  <img class="lazyload"  data-srcset="img/stages-1-1920px.webp" data-src="img/stages-1-1920px.jpg" alt="">
                 </picture>
               </div>
             </div>
@@ -264,7 +265,7 @@
               </div>
               <div class="stages__content-right">
                 <picture>
-                  <img srcset="img/stages-2-1920px.webp" src="img/stages-2-1920px.jpg" alt="">
+                  <img class="lazyload" data-srcset="img/stages-2-1920px.webp" data-src="img/stages-2-1920px.jpg" alt="">
                 </picture>
               </div>
             </div>
@@ -291,7 +292,7 @@
               </div>
               <div class="stages__content-right">
                 <picture>
-                  <img srcset="img/stages-3-1920px.webp" src="img/stages-3-1920px.jpg" alt="">
+                  <img class="lazyload" data-srcset="img/stages-3-1920px.webp" data-src="img/stages-3-1920px.jpg" alt="">
                 </picture>
               </div>
             </div>
@@ -317,7 +318,7 @@
               </div>
               <div class="stages__content-right">
                 <picture>
-                  <img srcset="img/stages-4-1920px.webp" src="img/stages-4-1920px.jpg" alt="">
+                  <img class="lazyload" data-src="img/stages-4-1920px.jpg" data-srcset="img/stages-4-1920px.webp" alt="">
                 </picture>
               </div>
             </div>
