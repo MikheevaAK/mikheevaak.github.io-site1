@@ -55,7 +55,7 @@
   }
 
   .hero__swiper-slide-1 {
-    background-image: url(../img/hero-slider-1-1024px.jpg);
+    background-image: url(../img/hero-slider-1-1024px.webp);
   }
 
   .hero__title {
@@ -99,7 +99,7 @@
     margin-bottom: 32px;
     width: 100%;
     min-height: 640px;
-    background-image: url(../img/about-bg-1024px.jpg);
+    background-image: url(../img/about-bg-1024px.webp);
   }
 
   .about__content-right {
@@ -181,17 +181,6 @@
     margin-bottom: 62px;
   }
 
-  /* stages */
-
-  .stages__content-right::before {
-    top: 6px;
-    background-size: contain;
-  }
-
-  .stages__content-right-1::before {
-    background-image: url(../img/stages-img1-1024px.jpg);
-  }
-
   /* qustion */
 
   .question__title {
@@ -219,11 +208,6 @@
 }
 
 @media (max-width: 1010px) {
-
-  /* stages */
-  .stages__content-right::before {
-    background-size: cover;
-  }
 
   /* footer */
   .footer__left {
@@ -282,15 +266,6 @@
     margin-bottom: 39px;
   }
 
-  .stages__content-right::before {
-    top: 0;
-    background-size: cover;
-  }
-
-  .stages__content-right-1::before {
-    background-image: url(../img/stages-img1-768px.jpg);
-  }
-
   .stages__content-left {
     margin-right: 0;
   }
@@ -333,7 +308,7 @@
 
  /* hero */
   .hero__swiper-slide-1  {
-    background-image: url(../img/hero-slider-1-768px.png);
+    background-image: url(../img/hero-slider-1-768px.webp);
   }
 
   .hero__descr {
@@ -349,7 +324,7 @@
 
   .about__content-left {
     height: 650px;
-    background-image: url(../img/about-img-768px.jpg);
+    background-image: url(../img/about-img-768px.webp);
   }
 
   .about__content-wrap {
@@ -465,7 +440,7 @@
   }
 
   .hero__swiper-slide-1 {
-    background-image: url(../img/hero-slider-1-320px.jpg);
+    background-image: url(../img/hero-slider-1-320px.webp);
   }
 
   .swiper-horizontal > .swiper-pagination-bullets,
@@ -609,10 +584,6 @@
   .stages__content-right {
     min-height: 160px;
     margin-bottom: 16px;
-  }
-
-  .stages__content-right-1::before {
-    background-image: url(../img/stages-img-1-320px.png);
   }
 
   .stages__content-title {

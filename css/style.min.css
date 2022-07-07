@@ -332,23 +332,21 @@ a:focus-visible {
 }
 
 .swiper-slide {
-  /* width: 100%;
-  height: 100%; */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .hero__swiper-slide-1 {
-  background-image: url(../img/hero-slider-1-1920px.jpg);
+  background-image: url(../img/hero-slider-1-1920px.webp);
 }
 
 .hero__swiper-slide-2 {
-  background-image: url(../img/hero-slider-2-1920px.jpg);
+  background-image:  url(../img/hero-slider-2-1920px.webp);
 }
 
 .hero__swiper-slide-3 {
-  background-image: url(../img/hero-slider-3-1920px.jpg);
+  background-image: url(../img/hero-slider-3-1920px.webp);
 }
 
 .swiper-pagination {
@@ -444,7 +442,7 @@ a:focus-visible {
   align-items: flex-end;
   width: calc((100%-32px)/2);
   min-height: 622px;
-  background-image: url(../img/about-left-bg.jpg);
+  background-image: url(../img/about-left-bg.webp);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -644,33 +642,10 @@ a:focus-visible {
   overflow: hidden;
 }
 
-
-.stages__content-right::before {
-  content: '';
-  position: absolute;
-  top: 10px;
+.stages__content-right img {
   width: 100%;
   height: 100%;
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.stages__content-right-1::before {
-  background-image: url(../img/stages-1-1920px.jpg);
-}
-
-.stages__content-right-2::before {
-  background-image: url(../img/stages-2-1920px.jpg);
-}
-
-.stages__content-right-3::before {
-  background-image: url(../img/stages-3-1920px.jpg);
-}
-
-.stages__content-right-4::before {
-  background-image: url(../img/stages-4-1920px.jpg);
+  object-fit: cover;
 }
 
 .stages__content-btn {

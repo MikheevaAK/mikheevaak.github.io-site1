@@ -6,12 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <link rel="preload" href="fonts/montserrat-v21-latin_cyrillic-regular.woff2" as="font" />
+  <link rel="preload" href="fonts/montserrat-v21-latin_cyrillic-800.woff2" as="font" />
+  <link rel="preload" href="fonts/montserrat-v21-latin_cyrillic-700.woff2" as="font" />
+  <link rel="preload" href="fonts/montserrat-v21-latin_cyrillic-600.woff2" as="font" />
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/fonts.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/media.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/media.min.css" />
   <link rel="icon" href="img/favicon.svg" />
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script defer src="lazyload.min.js"></script>
+  <script defer src="script.min.js"></script>
 </head>
 
 <body>
@@ -139,7 +148,7 @@
         <div class="about__content flex">
           <div class="about__content-left flex">
             <div class="about__content-wrap flex">
-              <img class="about__content-mobile" src="img/about-img-320px.png" alt="">
+              <img class="about__content-mobile" srcset="img/about-img-320px.webp" src="img/about-img-320px.png" alt="">
               <p class="about__left-descr">
                 Принимая во&nbsp;внимание показатели успешности, перспективное
                 планирование способствует подготовке и&nbsp;реализации новых
@@ -224,7 +233,13 @@
                   </button>
                 </div>
               </div>
-              <div class="stages__content-right stages__content-right-1">
+              <div class="stages__content-right">
+                <picture>
+                  <source media="(max-width: 640px)" srcset="img/stages-img-1-320px.webp, img/stages-img-1-320px.png">
+                  <source media="(max-width: 917px)" srcset="img/stages-img1-768px.webp, img/stages-img1-768px.jpg">
+                  <source media="(max-width: 1024px)" srcset="img/stages-img1-1024px.webp, img/stages-img1-1024px.jpg">
+                  <img srcset="img/stages-1-1920px.webp" src="img/stages-1-1920px.jpg" alt="">
+                </picture>
               </div>
             </div>
           </div>
@@ -247,7 +262,10 @@
                   </button>
                 </div>
               </div>
-              <div class="stages__content-right stages__content-right-2">
+              <div class="stages__content-right">
+                <picture>
+                  <img srcset="img/stages-2-1920px.webp" src="img/stages-2-1920px.jpg" alt="">
+                </picture>
               </div>
             </div>
           </div>
@@ -271,7 +289,10 @@
                   </button>
                 </div>
               </div>
-              <div class="stages__content-right stages__content-right-3">
+              <div class="stages__content-right">
+                <picture>
+                  <img srcset="img/stages-3-1920px.webp" src="img/stages-3-1920px.jpg" alt="">
+                </picture>
               </div>
             </div>
           </div>
@@ -294,7 +315,10 @@
                   </button>
                 </div>
               </div>
-              <div class="stages__content-right stages__content-right-4">
+              <div class="stages__content-right">
+                <picture>
+                  <img srcset="img/stages-4-1920px.webp" src="img/stages-4-1920px.jpg" alt="">
+                </picture>
               </div>
             </div>
           </div>
@@ -338,7 +362,8 @@
           </li>
           <li class="question__item">
             <div class="question__item-top flex">
-              <h3 class="question__item-title">У&nbsp;меня есть свой проект. Сможем&nbsp;ли мы&nbsp;его доработать&nbsp;<span class="question__item-title--color">/</span> реализовать? </h3>
+              <h3 class="question__item-title">У&nbsp;меня есть свой проект. Сможем&nbsp;ли мы&nbsp;его
+                доработать&nbsp;<span class="question__item-title--color">/</span> реализовать? </h3>
               <button aria-label="Развернуть ответ на вопрос" class="question__button btn-reset">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
@@ -398,7 +423,9 @@
           </li>
           <li class="question__item">
             <div class="question__item-top flex">
-              <h3 class="question__item-title">Могу ли я делегировать вам работу <span class="question__item-title--color">/</span> согласование с&nbsp;подрядчиком&nbsp;<span class="question__item-title--color">/</span> организацией? </h3>
+              <h3 class="question__item-title">Могу ли я делегировать вам работу <span
+                  class="question__item-title--color">/</span> согласование с&nbsp;подрядчиком&nbsp;<span
+                  class="question__item-title--color">/</span> организацией? </h3>
               <button aria-label="Развернуть ответ на вопрос" class="question__button btn-reset">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
@@ -428,7 +455,8 @@
           </li>
           <li class="question__item">
             <div class="question__item-top flex">
-              <h3 class="question__item-title">Могу&nbsp;ли я&nbsp;вернуть деньги на&nbsp;каком-либо из&nbsp;этапов работ?</h3>
+              <h3 class="question__item-title">Могу&nbsp;ли я&nbsp;вернуть деньги на&nbsp;каком-либо из&nbsp;этапов
+                работ?</h3>
               <button aria-label="Развернуть ответ на вопрос" class="question__button btn-reset">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
@@ -555,10 +583,9 @@
       </div>
     </div>
   </footer>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="script.js"></script>
+  <script>
+    lazyload();
+  </script>
 </body>
 
 </html>
